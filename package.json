@@ -1,0 +1,29 @@
+{
+  "name": "static-prototype-kit",
+  "version": "1.0.0",
+  "description": "Boilerplate for rapid prototyping of component-based systems in static HTML",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@mxbck",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-data": "^1.2.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-util": "^3.0.8",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {}
+}

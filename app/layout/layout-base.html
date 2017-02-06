@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A boilerplate for static prototyping">
+
+    <title>Static Prototyping Kit</title>
+
+    <link rel="stylesheet" href="assets/styles/main.css">
+  </head>
+  <body>
+
+    <div id="app" role="document">
+      {% include "header.html" %}
+
+      <main class="main" role="main">
+      {% block content %}{% endblock %}
+      </main>
+    </div>
+
+    <script src="assets/scripts/bundle.js"></script>
+  </body>
+</html>

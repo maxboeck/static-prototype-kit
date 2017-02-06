@@ -1,0 +1,11 @@
+[
+  {
+    "id" : 1,
+    "title" : "Some Demo Data",
+    "description" : "This could be any data you want to display in your app. For a good mockup generator, check https://www.mockaroo.com",
+    "foo" : {
+      "bar" : true,
+      "baz" : ["lorem", "ipsum", "dolor"]
+    }
+  }
+]

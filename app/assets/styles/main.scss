@@ -1,0 +1,18 @@
+//--------------------
+// VARIABLES & MIXINS
+// stuff that does not produce any CSS
+//--------------------
+@import "utils/var";
+
+//--------------------
+// COMPONENTS
+// styles directly related to a component
+//--------------------
+@import "components/header";
+@import "components/sidebar";
+
+//--------------------
+// VENDOR
+// third-party stuff
+//--------------------
+@import "vendor/bootstrap/bootstrap";
