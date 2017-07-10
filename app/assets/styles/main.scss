@@ -2,7 +2,9 @@
 // VARIABLES & MIXINS
 // stuff that does not produce any CSS
 //--------------------
-@import "utils/var";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/functions";
 
 //--------------------
 // COMPONENTS
@@ -15,4 +17,4 @@
 // VENDOR
 // third-party stuff
 //--------------------
-@import "vendor/bootstrap/bootstrap";
+@import "vendor/bootstrap";

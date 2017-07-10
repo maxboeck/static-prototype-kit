@@ -1,0 +1,20 @@
+//--------------------
+// SCSS MIXINS
+//--------------------
+
+//Bootstrap Mixins
+@import "~bootstrap/scss/mixins";
+
+// shorthand for media-breakpoint-up
+@mixin mq($name) {
+  @include media-breakpoint-up($name) {
+    @content;
+  }
+}
+
+// shorthand for media-breakpoint-down
+@mixin mq-down($name) {
+  @include media-breakpoint-down($name) {
+    @content;
+  }
+}

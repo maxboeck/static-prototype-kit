@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
+var tildeImporter = require('node-sass-tilde-importer');
 var $ = require('gulp-load-plugins')();
 
 var AUTOPREFIXER_BROWSERS = [
@@ -23,6 +24,7 @@ gulp.task('styles', () => {
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       precision: 10,
+      importer: tildeImporter,
       onError: browserSync.notify
     }))
     .pipe($.autoprefixer({browsers: AUTOPREFIXER_BROWSERS}))
