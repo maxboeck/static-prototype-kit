@@ -1,0 +1,62 @@
+// Icon Component
+
+.icon {
+  display:inline-block;
+  height:1em;
+  width:1em;
+  vertical-align: middle;
+  fill:currentColor;
+}
+
+// Animated Menu Burger Icon
+
+// Menu Burger Icon
+.menuicon {
+  display:block;
+  width: 32px;
+  height: 20px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .3s cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+  cursor: pointer;
+  margin:0 auto;
+
+  &__bar {
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: currentColor;
+    border-radius:3px;
+    transform: rotate(0deg);
+    transition: transform .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 50%;
+    }
+    &:nth-child(4) {
+      top: 100%;
+    }    
+  }
+}
+
+// Active State: Transform to "X"
+.menu-open .menuicon {
+  &:nth-child(1),
+  &:nth-child(4) {
+    width:0;
+    top: 50%;
+    left: 50%;
+  }
+  &:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  &:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}

@@ -1,0 +1,55 @@
+// Button Component
+
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $input-btn-border-width solid transparent;
+  @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .65;
+  }
+}
+
+// Block Modifier for full-width
+// chain with self to override .btn + .btn
+.btn.btn--block {
+  display:block;
+  width:100%;
+
+  & + & {
+    margin:1rem 0 0 0;
+  }
+}
+
+// Primary CTA Buttons
+.btn--primary {
+  color:#FFF;
+  background-color:$brand-primary;
+
+  @include hover-focus {
+    background-color: darken($brand-primary, 15%);
+  }
+}
+
+// Secondary Action Buttons
+.btn--secondary {
+  color:$brand-secondary;
+  background-color:transparent;
+
+  @include hover-focus {
+    background-color: darken($brand-secondary, 15%);
+  }
+}

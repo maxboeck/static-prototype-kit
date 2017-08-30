@@ -1,0 +1,77 @@
+// Text Field Component
+
+$textfield-border-height:       2px;
+$textfield-bottom-border-color: $gray-lighter;
+$textfield-highlight-color:     $body-color;
+$textfield-disabled-color:      $textfield-bottom-border-color;
+
+
+// The container for the field component
+.textfield {
+  @extend %field;
+  @include field-states;
+
+  // Styling for the input element itself
+  &__input {
+    border: none;
+    border-bottom: $textfield-border-height solid $textfield-bottom-border-color;
+    display: block;
+    font-size: $field-font-size;
+    font-family: $font-family-sans-serif;
+    margin: 0;
+    padding: $field-input-padding 0;
+    width: 100%;
+    background: none;
+    text-align: left;
+    color: $body-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__feedback {
+    @extend %field__feedback;
+  }
+}
+
+
+// Styling for the label / floating label
+.textfield__label {
+  @extend %field__label;
+
+  //actually float the label up
+  .textfield--dirty &,
+  .textfield--focused &,
+  .textfield__input:focus + & {
+    @include floating-label;
+  }
+
+  // The after label is the colored underline for the TextField.
+  &::after {
+    background-color: $textfield-highlight-color;
+    bottom: $field-vertical-spacing;
+    content: '';
+    height: $textfield-border-height;
+    left: 45%;
+    position: absolute;
+    transition: all .2s $animation-curve-default;
+    visibility: hidden;
+    width: 10px;
+  }
+
+  .textfield--focused &::after,
+  .textfield__input:focus + &::after, {
+    left: 0;
+    visibility: visible;
+    width: 100%;
+  }
+}
+
+.textfield--autocomplete {
+  .textfield__input {
+    background:transparent url('/static/svg/dropdown.svg') no-repeat right center;
+    background-size:1.25em;
+    padding-right:1.5em;
+  }
+}

@@ -2,6 +2,9 @@
 // SCSS CUSTOM FUNCTIONS
 //--------------------
 
+//Bootstrap Functions
+@import "~bootstrap/scss/functions";
+
 // z-index layering
 @function z($layer) {
   @if map-has-key($z-layers, $layer) == false {

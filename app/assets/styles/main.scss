@@ -1,20 +1,48 @@
+// ---------------------------------
+// MASTER STYLESHEET INDEX
+// ---------------------------------
+
 //--------------------
-// VARIABLES & MIXINS
-// stuff that does not produce any CSS
+// UTILITIES
 //--------------------
+
+@import "utils/functions";
 @import "utils/variables";
 @import "utils/mixins";
-@import "utils/functions";
+
+//--------------------
+// CORE MODULES
+// partials with global scope
+//--------------------
+
+@import "base/normalize";
+@import "base/reboot";
+@import "base/helpers";
+@import "base/typography";
+@import "base/animation";
 
 //--------------------
 // COMPONENTS
-// styles directly related to a component
+// partials with local scope to a component
 //--------------------
-@import "components/header";
-@import "components/sidebar";
+
+@import "components/button";
+@import "components/icon";
+@import "components/spinner";
+
+@import "components/form";
+@import "components/form/fields";
 
 //--------------------
-// VENDOR
-// third-party stuff
+// PAGES
+// styles for specific views
 //--------------------
+
+@import "pages/home";
+
+//--------------------
+// VENDOR STYLES
+// third party stuff
+//--------------------
+
 @import "vendor/bootstrap";
