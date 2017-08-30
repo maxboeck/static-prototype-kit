@@ -27,6 +27,6 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.4"
+    "bootstrap": "4.0.0-beta"
   }
 }
