@@ -7,5 +7,5 @@ var del = require('del');
 gulp.task('clean', del.bind(null, ['dist'], {dot: true}));
 
 gulp.task('build', ['clean'], function(cb) {
-  runSequence('html', 'scripts', 'styles', cb);
+  runSequence('html', 'scripts', 'styles', 'icons', cb);
 });
