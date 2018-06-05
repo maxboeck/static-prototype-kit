@@ -3,43 +3,43 @@
 //--------------------
 
 //Bootstrap Mixins
-@import "~bootstrap/scss/mixins";
+@import '~bootstrap/scss/_mixins';
 
 // shorthand for media-breakpoint-up
 @mixin mq($name) {
-  @include media-breakpoint-up($name) {
-    @content;
-  }
+    @include media-breakpoint-up($name) {
+        @content;
+    }
 }
 
 // Custom MQ for max-widths.
 // applies to all widths below the given breakpoint
 // i.e. mq-down(md, (md: 768px)) = max-width: 767px
 @mixin mq-down($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  @if $min {
-    @media (max-width: ($min - 1px)) {
-      @content;
+    $min: breakpoint-min($name, $breakpoints);
+    @if $min {
+        @media (max-width: ($min - 1px)) {
+            @content;
+        }
+    } @else {
+        @content;
     }
-  } @else {
-    @content;
-  }
 }
 
 // Text Hyphenation
 @mixin hyphenate() {
-  -ms-word-break: break-all;
-     word-break: break-all;
-     // Non standard for webkit
-     word-break: break-word;
--webkit-hyphens: auto;
-   -moz-hyphens: auto;
-	hyphens: auto;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    // Non standard for webkit
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
 
 // Text Truncation
 @mixin truncate() {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

@@ -2,7 +2,7 @@
 // SCSS VARIABLES
 //--------------------
 
-@import "~bootstrap/scss/variables";
+@import '~bootstrap/scss/_variables';
 
 // Grid breakpoints
 //
@@ -10,11 +10,11 @@
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
 );
 
 // Grid containers
@@ -22,102 +22,101 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
 );
-
 
 // Z-Index Stack
 //
 // Control the order of layers in the application
 $z-layers: (
-  "modal": 999,
-  "header": 100,
-  "content-overlay": 25,
+    'modal': 999,
+    'header': 100,
+    'content-overlay': 25
 );
-
 
 // Colors
 //
 // Grayscale.
 
-$gray-darkest:              #2F2F2F;
-$gray-dark:                 #4A4A4A;
-$gray:                      lighten($gray-dark, 25%);
-$gray-light:                #9B9B9B;
-$gray-lighter:              #D8D8D8;
-$gray-lightest:             #F7F7F7;
+$gray-darkest: #2f2f2f;
+$gray-dark: #4a4a4a;
+$gray: lighten($gray-dark, 25%);
+$gray-light: #9b9b9b;
+$gray-lighter: #d8d8d8;
+$gray-lightest: #f7f7f7;
 
 // Brand Colors
 
-$brand-blue:                #005FA5;
-$brand-red:                 #FF6559;
+$brand-blue: #005fa5;
+$brand-red: #ff6559;
 
 // State Colors
 
-$state-success:             #95b34f;
-$state-info:                #498CBD;
-$state-warning:             #df8a13;
-$state-error:               #D0021B;
+$state-success: #95b34f;
+$state-info: #498cbd;
+$state-warning: #df8a13;
+$state-error: #d0021b;
 
 //Color Mappings
 
-$brand-primary:             $brand-red;
-$brand-secondary:           $brand-blue;
+$brand-primary: $brand-red;
+$brand-secondary: $brand-blue;
 
 // Links
 //
 // Style anchor elements.
 
-$link-color:                 $brand-primary;
-$link-decoration:            none;
-$link-hover-color:           darken($link-color, 10%);
-$link-hover-decoration:      underline;
+$link-color: $brand-primary;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 10%);
+$link-hover-decoration: underline;
 
 // Body
 //
 // Settings for the `<body>` element.
 
-$body-bg:                    #FFFFFF; //#F9FAFC;
-$body-color:                 $gray-dark;
+$body-bg: #ffffff; //#F9FAFC;
+$body-color: $gray-dark;
 
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-serif:          Georgia, "Times New Roman", Times, serif;
-$font-family-monospace:      Menlo, Monaco, Consolas, "Andale Mono", "Courier New", monospace;
-$font-family-base:           $font-family-sans-serif;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family-serif: Georgia, 'Times New Roman', Times, serif;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Andale Mono', 'Courier New',
+    monospace;
+$font-family-base: $font-family-sans-serif;
 
-$font-size-root:             100%;
-$font-size-base:             1rem;
+$font-size-root: 100%;
+$font-size-base: 1rem;
 
-$line-height:                1.625;
-$leading:                    round(16 * $line-height);
-$leading-rem:                $leading / 16;
+$line-height: 1.625;
+$leading: round(16 * $line-height);
+$leading-rem: $leading / 16;
 
 // Animation
 //
 // Default easing curves, Transitions, etc
 
-$animation-curve-fast-out-slow-in:    cubic-bezier(0.4, 0, 0.2, 1);
-$animation-curve-linear-out-slow-in:  cubic-bezier(0, 0, 0.2, 1);
-$animation-curve-fast-out-linear-in:  cubic-bezier(0.4, 0, 1, 1);
-$animation-curve-default:             $animation-curve-fast-out-slow-in;
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
+$animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);
+$animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1);
+$animation-curve-default: $animation-curve-fast-out-slow-in;
 
 // Misc Shared
 //
 // common shared styles
 
-$border-radius:               .25rem;
-$spacing-x:                   $grid-gutter-width;
-$spacing-y:                   2rem;
-
+$border-radius: 0.25rem;
+$spacing-x: $grid-gutter-width;
+$spacing-y: 2rem;
 
 // Components
 //
 // Variables related to specific elements
-

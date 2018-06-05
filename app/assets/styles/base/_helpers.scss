@@ -3,7 +3,7 @@
 //
 
 .clearfix {
-  @include clearfix;
+    @include clearfix;
 }
 
 //
@@ -11,26 +11,26 @@
 //
 
 .sr-only {
-  @include sr-only();
+    @include sr-only();
 }
 
 .sr-only-focusable {
-  @include sr-only-focusable();
+    @include sr-only-focusable();
 }
 
 .sr-skip-link {
-  @include sr-only();
-  @include sr-only-focusable();
+    @include sr-only();
+    @include sr-only-focusable();
 
-  &:focus {
-    left: 50%;
-    top: 0;
-    font-size: 1rem;
-    transform: translateX(-50%);
-    background-color: $gray-dark;
-    color: #FFF;
-    border-radius: 0 0 .5rem .5rem;
-    padding: 1rem 1.5rem;
-    outline:0;
-  }
+    &:focus {
+        left: 50%;
+        top: 0;
+        font-size: 1rem;
+        transform: translateX(-50%);
+        background-color: $gray-dark;
+        color: #fff;
+        border-radius: 0 0 0.5rem 0.5rem;
+        padding: 1rem 1.5rem;
+        outline: 0;
+    }
 }

@@ -1,22 +1,22 @@
 // Form Component
 
 .form {
-  &__desc {
-    margin-bottom:1rem;
-  }
-  &__fields + &__fields {
-    padding-top:.5rem;
-    margin-top:.5rem;
-    border-top:1px solid $gray-lighter;
-  }
-  &__actions {
-    padding-top:.75rem;
-    
-    .box--narrow & {
-      text-align: left;
+    &__desc {
+        margin-bottom: 1rem;
     }
-    @include mq(md){
-      text-align: right;
+    &__fields + &__fields {
+        padding-top: 0.5rem;
+        margin-top: 0.5rem;
+        border-top: 1px solid $gray-lighter;
     }
-  }
+    &__actions {
+        padding-top: 0.75rem;
+
+        .box--narrow & {
+            text-align: left;
+        }
+        @include mq(md) {
+            text-align: right;
+        }
+    }
 }

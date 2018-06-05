@@ -3,13 +3,13 @@
 //--------------------
 
 //Bootstrap Functions
-@import "~bootstrap/scss/functions";
+@import '~bootstrap/scss/_functions';
 
 // z-index layering
 @function z($layer) {
-  @if map-has-key($z-layers, $layer) == false {
-    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
-  }
- 
-  @return map-get($z-layers, $layer);
+    @if map-has-key($z-layers, $layer) == false {
+        @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+    }
+
+    @return map-get($z-layers, $layer);
 }

@@ -1,83 +1,84 @@
 // Form Field Components Index
 
-$field-vertical-spacing:        1.142857143rem;
-$field-input-padding:           .25rem;
-$field-font-size:               1rem;
-$field-floating-label-fontsize: .75rem;
+$field-vertical-spacing: 1.142857143rem;
+$field-input-padding: 0.25rem;
+$field-font-size: 1rem;
+$field-floating-label-fontsize: 0.75rem;
 
-$field-error-color:             $state-error;
-$field-success-color:           $state-success;
+$field-error-color: $state-error;
+$field-success-color: $state-success;
 
 // shared properties
 %field {
-  display:block;
-  width:100%;
-  max-width: 100%;
-  min-width:0;
-  position:relative;
-  font-size: $field-font-size;
-  padding-top: $field-vertical-spacing;
-  padding-bottom: $field-vertical-spacing;
-  margin:0;
-  color:$gray-light;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    position: relative;
+    font-size: $field-font-size;
+    padding-top: $field-vertical-spacing;
+    padding-bottom: $field-vertical-spacing;
+    margin: 0;
+    color: $gray-light;
 }
 
 %field__label {
-  position: absolute;
-  display: block;
-  top: ($field-input-padding + $field-vertical-spacing);
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin:0;
-  padding:0;
-  pointer-events: none;
-  overflow: hidden;
-  white-space: nowrap;
-  color: currentColor;
-  font-size: $field-font-size;
-  text-align: left;
-  transition: all .2s $animation-curve-default;
+    position: absolute;
+    display: block;
+    top: ($field-input-padding + $field-vertical-spacing);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    overflow: hidden;
+    white-space: nowrap;
+    color: currentColor;
+    font-size: $field-font-size;
+    text-align: left;
+    transition: all 0.2s $animation-curve-default;
 }
 
 %field__feedback {
-  position: absolute;
-  font-size: $field-floating-label-fontsize;
-  font-style: italic;
-  margin-top: 3px;
-  display: block;
-  color:currentColor;
+    position: absolute;
+    font-size: $field-floating-label-fontsize;
+    font-style: italic;
+    margin-top: 3px;
+    display: block;
+    color: currentColor;
 
-  ul {
-    list-style: none;
-    padding:0;
-    margin:0;
-  }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 // shared mixins
 @mixin field-states {
-  @at-root {
-    &--valid {
-      color:$field-success-color;
+    @at-root {
+        &--valid {
+            color: $field-success-color;
+        }
+        &--invalid {
+            color: $field-error-color;
+        }
     }
-    &--invalid {
-      color:$field-error-color;
-    }
-  }
 }
 
 @mixin floating-label {
-  color:currentColor;
-  font-size : $field-floating-label-fontsize;
-  top: $field-vertical-spacing - ($field-floating-label-fontsize + $field-input-padding);
-  visibility: visible;
-  pointer-events: none;
+    color: currentColor;
+    font-size: $field-floating-label-fontsize;
+    top: $field-vertical-spacing -
+        ($field-floating-label-fontsize + $field-input-padding);
+    visibility: visible;
+    pointer-events: none;
 }
 
 // Field Types
 
-@import "textfield";
-@import "checkbox";
-@import "select";
+@import 'textfield';
+@import 'checkbox';
+@import 'select';

@@ -2,68 +2,69 @@
 
 // Native HTML
 select {
-  display: inline-block;
-  padding: 4px;
-  outline: 0;
-  background-color: #fff;
-  border: 1px solid $gray-lighter;
+    display: inline-block;
+    padding: 4px;
+    outline: 0;
+    background-color: #fff;
+    border: 1px solid $gray-lighter;
 }
 
 // Custom Component
 .select {
-  @extend %field;
-  @include field-states;
+    @extend %field;
+    @include field-states;
 
-  &__wrapper {
-    @extend .textfield__input;
-    background:transparent url('/static/svg/dropdown.svg') no-repeat right center;
-    background-size:1.25em;
-    padding:0;
-  }
-
-  &__input {
-    display:block;
-    opacity:0;
-    width:100%;
-    padding:$field-input-padding 0;
-    margin:0;
-    color: $body-color !important;
-
-    // reset style
-    box-shadow: none;
-    border:none;
-    background:transparent;
-    background-image: none;
-
-    //some browser hackery to hide the default dropdown arrow
-    -webkit-appearance: none;
-    -moz-appearance:none;
-    text-indent:.01px;
-    text-overflow:'';
-
-    transition:opacity .2s linear;
-
-    &:focus {
-      outline:0;
+    &__wrapper {
+        @extend .textfield__input;
+        background: transparent url('/static/svg/dropdown.svg') no-repeat right
+            center;
+        background-size: 1.25em;
+        padding: 0;
     }
 
-    .select--dirty & {
-      opacity: 1;
+    &__input {
+        display: block;
+        opacity: 0;
+        width: 100%;
+        padding: $field-input-padding 0;
+        margin: 0;
+        color: $body-color !important;
+
+        // reset style
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        background-image: none;
+
+        //some browser hackery to hide the default dropdown arrow
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+
+        transition: opacity 0.2s linear;
+
+        &:focus {
+            outline: 0;
+        }
+
+        .select--dirty & {
+            opacity: 1;
+        }
     }
-  }
 
-  &__label {
-    @extend %field__label;
-    text-overflow: ellipsis;
-    padding-right:2em;
+    &__label {
+        @extend %field__label;
+        text-overflow: ellipsis;
+        padding-right: 2em;
 
-    .select--open &,
-    .select--dirty & {
-      @include floating-label;
+        .select--open &,
+        .select--dirty & {
+            @include floating-label;
+        }
     }
-  }
 
-  &__feedback {
-    @extend %field__feedback;
-  }
+    &__feedback {
+        @extend %field__feedback;
+    }
 }

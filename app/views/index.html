@@ -3,16 +3,16 @@
 {% block main %}
 <main class="main" role="main">
 
-  {% for item in data %}
-    <div class="item">
-      <h2 class="item__title">{{ item.title }}</h2>
-      <p class="item__desc">{{ item.description }}</p>
-    </div>
-  {% endfor %}
+	{% for item in data %}
+		<div class="item">
+			<h2 class="item__title">{{ item.title }}</h2>
+			<p class="item__desc">{{ item.description }}</p>
+		</div>
+	{% endfor %}
 
 </main>
 {% endblock %}
 
 {% block sidebar %}
-  {% include "sidebar.html" %}
+	{% include "sidebar.html" %}
 {% endblock %}
