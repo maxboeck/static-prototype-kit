@@ -9,25 +9,25 @@
   "author": "@mxbck",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.18.7",
+    "browser-sync": "^2.24.4",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-data": "^1.2.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-data": "^1.3.1",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-nunjucks-render": "^2.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-svg-sprite": "^1.3.7",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svg-sprite": "^1.4.0",
     "gulp-util": "^3.0.8",
-    "node-sass-tilde-importer": "^1.0.0",
-    "require-dir": "^0.3.1",
-    "run-sequence": "^2.0.0",
-    "webpack-stream": "^3.2.0"
+    "node-sass-tilde-importer": "^1.0.2",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1",
+    "webpack-stream": "^4.0.3"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-beta"
+    "bootstrap": "4.1.1"
   }
 }
